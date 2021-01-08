@@ -85,7 +85,7 @@ resource "aws_nat_gateway" "nat_gw" {
   }
 }
 
-*/
+
   
 
 resource "aws_route_table" "lambda_function_rt" {
@@ -101,6 +101,8 @@ resource "aws_route_table" "lambda_function_rt" {
     Name = "${var.environment}_lambda_function_rt_${substr(element(var.availability_zones, count.index), -1, 1)}"
   }
 }
+
+*/
 
 # private subnet route table associations
 resource "aws_route_table_association" "private_rta" {
