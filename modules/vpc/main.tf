@@ -102,7 +102,7 @@ resource "aws_route_table" "lambda_function_rt" {
   }
 }
 
-*/
+
 
 # private subnet route table associations
 resource "aws_route_table_association" "private_rta" {
@@ -110,6 +110,8 @@ resource "aws_route_table_association" "private_rta" {
   route_table_id = element(aws_route_table.lambda_function_rt.*.id, count.index)
   count          = length(aws_subnet.private_subnets)
 }
+
+*/
 
 # public subnet route table associations
 resource "aws_route_table_association" "public_rta" {
