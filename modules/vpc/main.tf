@@ -62,6 +62,8 @@ resource "aws_route_table" "public_rt" {
   }
 }
 
+/*
+  
 # NAT EIPs
 resource "aws_eip" "nat_eip" {
   vpc   = true
@@ -82,6 +84,9 @@ resource "aws_nat_gateway" "nat_gw" {
     Name = "${var.environment}_nat_gw"
   }
 }
+
+*/
+  
 
 resource "aws_route_table" "lambda_function_rt" {
   vpc_id = aws_vpc.application_vpc.id
