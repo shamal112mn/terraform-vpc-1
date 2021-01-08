@@ -62,7 +62,7 @@ resource "aws_route_table" "public_rt" {
   }
 }
 
-/*
+
   
 # NAT EIPs
 resource "aws_eip" "nat_eip" {
@@ -111,7 +111,7 @@ resource "aws_route_table_association" "private_rta" {
   count          = length(aws_subnet.private_subnets)
 }
 
-*/
+
 
 # public subnet route table associations
 resource "aws_route_table_association" "public_rta" {
